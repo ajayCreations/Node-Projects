@@ -1,0 +1,47 @@
+<!-- If the code become very large so 
+
+use a programing concept called Separation of Concern 
+which is
+Separation of concerns is a software architecture design pattern/principle 
+for separating an application into distinct sections, so each section addresses 
+a separate concern. At its essence, Separation of concerns is about order.
+-->
+
+<%- include('header') -%>
+
+<div class="text-center center-div" id="login">
+    <div class="container w-25 border py-5">
+        <div class="title pb-5">
+
+            <h2 class="font-weight-bold">
+                Login Systems 
+            </h2>
+            <span>Log in for the existence user </span>
+            <% if(locals.logout){ %>
+                <div class="alert alert-success text-center">
+                    <%= logout %>
+                </div>
+            <% } %>
+
+        </div>
+
+        <form action="/route/login" method="post" class="pt-3">
+            <div class="form-group">
+                <input type="email" class="form control" placeholder="email" name="email">
+            </div>
+            <small class="form-text text-muted text-left">Register email address</small>
+            
+            <div class="form-group">
+                <input type="password" class="form control" name="password" placeholder="password">
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+        
+        </form>
+
+       
+    </div>
+    
+</div>
+
+
+<%- include('footer') -%>
